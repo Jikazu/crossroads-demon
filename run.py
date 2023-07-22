@@ -36,4 +36,15 @@ def game_start():
         else:
             print("Invalid choice. Please select yes or no.")
 
+    if game_continue == False:
+        print("Would you like to make a new deal? Please select yes or no.")
+        deal_choice = input("> ")
+        if deal_choice == "yes":
+            game_continue == True
+        elif deal_choice == "no":
+            exit()
+        else:
+            print("Please select yes or no")
+            game_continue == False
+
 game_start()
