@@ -1,11 +1,34 @@
+def first_deal():
+    choices = ["yes", "no"]
+    print("So, are you here to make a deal with me?")
+    userInput = ""
+    while userInput not in choices:
+        print("Options: yes/no")
+        userInput == input()
+        if userInput == "yes":
+            makeDeal()
+        elif userInput == "no":
+            youWon()
+        else:
+            print("I didn't understand what you mean. Was that a yes or a no?")
 
 def game_start():
     """
     The function to start the game, with intro text.
     """
-    game_continue = True
-    while game_continue == True:
-        print("Hello, and welcome to the Crossroads where I, Crowley, is the crossroads demon. Are you here to make a deal?")
+    #game_continue = True
+    #while game_continue == True:
+    while True:
+        print("You have stumbled upon a crossroads, where the legend says if you dig a hole in the dead center of the crossroads, and bury a box containing a picture")
+        print("of yourself, graveyard dirt and a bone from a black cat, a crossroads demon can be summoned.")
+        print("When making a deal with a demon, they can make your dreams come true.")
+        print("You have all of these items, so you start digging and putting your items in the hole.")
+        print("After some 10 minutes have passed, you suddenly see a man appearing with glowing red eyes.")
+        print('"Hello mortal, it is I, the crossroads demon Crowley. Tell me, who have summoned me here?"')
+        name = input()
+        print("Hello, " + name+ ".")
+        first_deal()
+        """
         deal_choice = input(">" )
         if deal_choice == "yes":
             print("Ok, please tell me what you want. Is it love, money or fame that you're after?")
@@ -31,8 +54,8 @@ def game_start():
 
         elif deal_choice == "no":
             print("Thank you for playing. Goodbye")
-            game_continue == False
-            break
+            #game_continue == False
+            #break
         else:
             print("Invalid choice. Please select yes or no.")
 
@@ -46,5 +69,5 @@ def game_start():
         else:
             print("Please select yes or no")
             game_continue == False
-
+"""
 game_start()
