@@ -11,6 +11,7 @@ def game_start():
         print('"Hello mortal, it is I, the crossroads demon Crowley. Tell me, who have summoned me here?"')
         name = input("> ")
         print("Hello, " + name+ ". Ok, Are you here to strike a deal with me?" )
+        print("The only thing I require from you to make your dreams come true, is a small payment, of your soul.")
         choice_one(name)
         print("Do you want to try again?")
         print("Options: Yes/No")
@@ -49,7 +50,7 @@ def choice_lovemoney():
         print("Options: love/money")
         deal_choice = input("> ")
         if deal_choice.lower() == "love":
-            print("Oh, you're after love I see. Your wish is granted!")
+            print("Oh, you're after love I see. Your wish of true love is granted and we have made a deal.")
             print("You leave the crossroads and go back home. The day after, you're going out with your friend to a pub.")
             print("In the corner of the pub, you see a group of people, that you and your friend starts to talk to.")
             print("During the rest of the evening, two people out of the group have been flirting with you heavily during the night.")
@@ -57,7 +58,10 @@ def choice_lovemoney():
             love_choice()
             break
         elif deal_choice.lower() == "money":
-            print("You're a greedy bastard arent you.")
+            print("You're a greedy bastard arent you. Money is the only thing on your mind isn't it. ")
+            print("You leave the crossroads and go back home. The day after, you decide to try your luck.")
+            print("You enter big mall. Do you want to buy a lottery ticket there from one of the kiosks?")
+            money_choice()
             break
         else: 
             print("Invalid choice. Please select love or money")
@@ -77,5 +81,29 @@ def love_choice():
             break
         else:
             print("Invalid choice. Please select Harold or Anna")
-            
+
+def money_choice():
+    """
+    The function that is called if you made the choice Money
+    """
+    while True:
+        print("Options: yes/no")
+        deal_choice = input("> ")
+        if deal_choice.lower() == "yes":
+            print("You decided to get a lottery ticket. You decided to get a lottery ticket with random numbers, just for the heck of it.")
+            lottery_choice()
+            break
+        elif deal_choice.lower() == "no":
+            print("You did not end up getting a lottery ticket. However, while in the supermarket, a talent scout from a big acting agency noticed you.")
+            print("She gave you her business card, and asked you to call her back to setup an audition. You called her back three days later.")
+            print("You smashed the audition, and you landed a supporting role in a small indie film, which turned out to be a big success.")
+            print("After that, producers wanted you in every project of theirs, and within two years, you were the star of a Marvel movie.")
+            print("You were swimming in money, and could barely spend more than you earned. However, the lifestyle of an actor, started to take its toll.")
+            print("With all the partying you were doing, on one night four years after the big break, you decided to drive under the influence.")
+            print("You sadly got into a car crash, and passed away. Thus, Crowley came to collect your soul prematurely.")
+            break
+        else:
+            print("Invalid choice. Please select yes or no.")
+
+
 game_start()
