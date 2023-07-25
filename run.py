@@ -13,7 +13,7 @@ def game_start():
         print("When making a deal with a demon, they can make your dreams come true.")
         print("You have all of these items, so you start digging and putting your items in the hole.")
         print("After some 10 minutes have passed, you suddenly see a man appearing with glowing red eyes.")
-        print('"Hello mortal, it is I, the crossroads demon Crowley. Tell me, who have summoned me here?"')
+        print(F'{Fore.RED}"Hello mortal, it is I, the crossroads demon Crowley. Tell me, who have summoned me here?"')
         tell_name()
 
 def tell_name():
@@ -26,8 +26,8 @@ def tell_name():
             print("Please tell me your name.")
 
 def deal_time(name):
-        print("Hello, " + name+ ". Ok, Are you here to strike a deal with me?" )
-        print("The only thing I require from you to make your dreams come true, is a small payment, of your soul.")
+        print(F'{Fore.RED}"Hello, ' + name+ '. Ok, Are you here to strike a deal with me?\n'
+        'The only thing I require from you to make your dreams come true, is a small payment, of your soul."')
         choice_one(name)
         print("Do you want to try again?")
         print("Options: Yes/No")
@@ -49,7 +49,7 @@ def choice_one(name):
         print("Options: yes/no")
         deal_choice = input("> ")
         if deal_choice.lower() == "yes" :
-            print("Please tell me what you want. Most of you humans either want one of two things. Love, or money.")
+            print('"Please tell me what you want. Most of you humans either want one of two things. Love, or money."')
             choice_lovemoney()
             break
         elif deal_choice.lower() == "no":
