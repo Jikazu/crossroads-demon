@@ -1,3 +1,5 @@
+import colorama
+
 def game_start():
     """
     The function to start the game, with intro text.
