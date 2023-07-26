@@ -19,7 +19,6 @@ suddenly see a man appearing with glowing red eyes.")
         print(F'{Fore.RED}Hello mortal, it is I, the crossroad demon\n\
 Crowley. Tell me, who have summoned me here?')
         tell_name()
-        
 
 
 def tell_name():
