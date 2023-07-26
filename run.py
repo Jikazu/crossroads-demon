@@ -19,8 +19,7 @@ suddenly see a man appearing with glowing red eyes.")
         print(F'{Fore.RED}Hello mortal, it is I, the crossroad demon\n\
 Crowley. Tell me, who have summoned me here?')
         tell_name()
-        print(F'{Fore.GREEN}Thank you for playing!')
-        break
+        
 
 
 def tell_name():
@@ -44,7 +43,8 @@ dreams come true, is a small payment, of your soul.')
     while True:
         again = input("> \n")
         if again.lower() == "no":
-            return
+            print(F'{Fore.GREEN}Thank you for playing!')
+            quit()
         elif again.lower() == "yes":
             break
         else:
@@ -119,12 +119,23 @@ Harold was unfortunately diagnosed with stage 3 brain cancer\n\
 and passed a year later. The loss of him was devastating to you\n\
 and even though you searched, you could not find love again.\n\
 10 years after the day of the deal, you stood face to face with\n\
-Crowley again. However, you would not end up joining your beloved\n\
-in heaven, but stuck with Crowley in hell.")
+Crowley again when he came to claim your soul.\n\
+However, you would not end up joining your beloved in heaven\n\
+but rather you got stuck with Crowley in hell for eternity.")
             break
         elif deal_choice.lower() == "anna":
-            print("You decided to go out with Anna. The date was a success,\n\
-and she turned out to be your soulmate.")
+            print("You decided to go out with Anna. The date was a success\n\
+and she turned out to be your soulmate. You did everything together and\n\
+was inseperable. Soon enough you bought a house, and decided to start\n\
+a family together. Along came your daughter Iris, and two years after\n\
+her, a son called Adam. You eventually proposed to Anna, and you got\n\
+married in a local church surrounded by friends and family. You\n\
+had a good 10 years together, when one day Crowley came to claim\n\
+your soul. You pleaded with him for 10 more years, but he wouldn't\n\
+accept. You asked to say one last goodbye to your kids, which he\n\
+agreed to. You hugged them both, told you how much you loved them,\n\
+and went into another room, and fell lifeless to the floor.\n\
+Crowley had finally, claimed your soul.")
             break
         else:
             print("Invalid choice. Please select Harold or Anna")
