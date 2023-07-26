@@ -23,7 +23,7 @@ Crowley. Tell me, who have summoned me here?"')
 
 def tell_name():
     while True:
-        name = input("> ")
+        name = input("> \n")
         if name != "":
             deal_time(name)
             break
@@ -40,7 +40,7 @@ dreams come true, is a small payment, of your soul."')
     print("Do you want to try again?")
     print("Options: Yes/No")
     while True:
-        again = input("> ")
+        again = input("> \n")
         if again.lower() == "no":
             return
         elif again.lower() == "yes":
@@ -55,7 +55,7 @@ def choice_one(name):
     """
     while True:
         print("Options: yes/no")
-        deal_choice = input("> ")
+        deal_choice = input("> \n")
         if deal_choice.lower() == "yes":
             print(F'{Fore.RED}"Please tell me what you want. Most of you \n\
 humans either want one of two things. Love, or money."')
@@ -74,7 +74,7 @@ def choice_lovemoney():
     """
     while True:
         print("Options: love/money")
-        deal_choice = input("> ")
+        deal_choice = input("> \n")
         if deal_choice.lower() == "love":
             print("Oh, you're after love I see. Your wish of true love \n\
 is granted and we have made a deal.\n\
@@ -105,7 +105,7 @@ def love_choice():
     """
     while True:
         print("Options: Harold/Anna")
-        deal_choice = input("> ")
+        deal_choice = input("> \n")
         if deal_choice.lower() == "harold":
             print("You decided to go out with Harold. The date was a success\n\
 and he turned out to be your soulmate.")
@@ -124,7 +124,7 @@ def money_choice():
     """
     while True:
         print("Options: yes/no")
-        deal_choice = input("> ")
+        deal_choice = input("> \n")
         if deal_choice.lower() == "yes":
             print("You get a lottery ticket from one of the kiosks.\n\
 The staff asks you if you want to get a euromillion or a lotto ticket.")
@@ -157,7 +157,7 @@ def lottery_choice():
     """
     while True:
         print("Options: euromillion/lotto")
-        deal_choice = input("> ")
+        deal_choice = input("> \n")
         if deal_choice.lower() == "euromillion":
             print("You decided to get a euromillion ticket, and went \n\
 home after that to wait for the big day. Friday comes around,\n\
