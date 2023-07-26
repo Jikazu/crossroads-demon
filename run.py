@@ -111,7 +111,16 @@ def love_choice():
         deal_choice = input("> \n")
         if deal_choice.lower() == "harold":
             print("You decided to go out with Harold. The date was a success\n\
-and he turned out to be your soulmate.")
+and turns out, he was everything you wanted. 1 year after your first date,\n\
+he proposed to you and you accepted. You had a destination wedding in\n\
+Thailand, and all your loved ones was there. Together you had it all,\n\
+a house, a dog named Marley, and a Volvo. After 4 years of marriage,\n\
+Harold was unfortunately diagnosed with stage 3 brain cancer\n\
+and passed a year later. The loss of him was devastating to you\n\
+and even though you searched, you could not find love again.\n\
+10 years after the day of the deal, you stood face to face with\n\
+Crowley again. However, you would not end up joining your beloved\n\
+in heaven, but stuck with Crowley in hell.")
             break
         elif deal_choice.lower() == "anna":
             print("You decided to go out with Anna. The date was a success,\n\
