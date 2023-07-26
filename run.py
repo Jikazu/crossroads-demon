@@ -16,10 +16,12 @@ When making a deal with a demon they can make your dreams come true.\n\
 You have all of these items, so you start digging and putting \n\
 your items in the hole. After some 10 minutes have passed, you \n\
 suddenly see a man appearing with glowing red eyes.")
-        print(F'{Fore.RED}"Hello mortal, it is I, the crossroad demon\n\
-Crowley. Tell me, who have summoned me here?"')
+        print(F'{Fore.RED}Hello mortal, it is I, the crossroad demon\n\
+Crowley. Tell me, who have summoned me here?')
         tell_name()
+        print(F'{Fore.GREEN}Thank you for playing!')
         break
+
 
 def tell_name():
     while True:
@@ -32,10 +34,10 @@ def tell_name():
 
 
 def deal_time(name):
-    print(F'{Fore.RED}"Hello, ' + name + '.\n\
+    print(F'{Fore.RED}Hello, ' + name + '.\n\
 Are you here to strike a deal with me?')
-    print(F'{Fore.RED}"The only thing I require from you to make your \n\
-dreams come true, is a small payment, of your soul."')
+    print(F'{Fore.RED}The only thing I require from you to make your \n\
+dreams come true, is a small payment, of your soul.')
     choice_one(name)
     print("Do you want to try again?")
     print("Options: Yes/No")
@@ -57,12 +59,12 @@ def choice_one(name):
         print("Options: yes/no")
         deal_choice = input("> \n")
         if deal_choice.lower() == "yes":
-            print(F'{Fore.RED}"Please tell me what you want. Most of you \n\
-humans either want one of two things. Love, or money."')
+            print(F'{Fore.RED}Please tell me what you want. Most of you \n\
+humans either want one of two things. Love, or money.')
             choice_lovemoney()
             break
         elif deal_choice.lower() == "no":
-            print("Why did you summon me then? Goodbye")
+            print(F"{Fore.RED}Why did you summon me then? Goodbye")
             break
         else:
             print("Invalid choice. Please select yes or no.")
@@ -76,11 +78,12 @@ def choice_lovemoney():
         print("Options: love/money")
         deal_choice = input("> \n")
         if deal_choice.lower() == "love":
-            print("Oh, you're after love I see. Your wish of true love \n\
-is granted and we have made a deal.\n\
-You leave the crossroads and go back home. The day after, you're going \n\
-out with your friend to a pub. In the corner of the pub, you see a \n\
-group of people, that you and your friend starts to talk to.\n\
+            print(F"{Fore.RED}Oh, you're after love I see.\n\
+Your wish of true love is granted and we have made a deal.")
+            print("You leave the crossroads and go back home.\n\
+The day after, you're going out with your friend to a pub.\n\
+In the corner of the pub, you see a group of people,\n\
+that you and your friend starts to talk to.\n\
 During the rest of the evening, two people out of the group \n\
 have been flirting with you heavily during the night.\n\
 Their names are Harold and Anna, and both of them has asked you out\n\
@@ -88,7 +91,7 @@ Which one do you want to go out on a date with?")
             love_choice()
             break
         elif deal_choice.lower() == "money":
-            print("- You're a greedy bastard arent you. \n\
+            print(F"{Fore.RED}You're a greedy bastard arent you.\n\
 Money is the only thing on your mind isn't it.")
             print("You leave the crossroads and go back home. The day after,\n\
 you decide to try your luck. You enter big mall. \n\
@@ -164,20 +167,19 @@ home after that to wait for the big day. Friday comes around,\n\
 and eagerly you wait for the drawings. Turns out, you aced all\n\
 the numbers with your ticket and won the jackpot of 400 million £.\n\
 This will set you up for life so you decided to quit your job\n\
-and started travelling the world.You ended up going on a trip\n\
+and started travelling the world. You ended up going on a trip\n\
 of your lifetime, and visited all countries of the world in\n\
 just shy of 9 years. You made so many friends during your trips,\n\
 and with the endless amount of money you had, you donated money\n\
 to local charities during your travels. After 10 years,\n\
 on the day of the deal you made with Crowley, in the deep\n\
-jungle of the Amazon, you suddenly see a face that you recognise.\n\
-- Looks like you did not expect to see me here? It was\n\
-Crowley, unfortunately.\n\
-- It's time I collect my part of the deal,\n\
-as I gave you everything you wanted.\n\
-You sat down, when suddenly you felt a sharp pain in your chest, \n\
-and slowly drifted off. The 10 year deal was up, and you didn't regret it.\n\
-Crowley finally got his soul.")
+jungle of the Amazon, you suddenly see a face that you recognise.")
+            print(F"{Fore.RED}Looks like you did not expect to\n\
+see me here? It's time I collect my part of the deal as\n\
+I gave you everything you wanted.")
+            print("You sat down, when suddenly you felt a sharp\n\
+pain in your chest, and slowly drifted off. The 10 year deal\n\
+was up, and you didn't regret it. Crowley finally got his soul.")
             break
         elif deal_choice.lower() == "lotto":
             print("You ended up getting a lotto ticket, and went home\n\
