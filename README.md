@@ -74,9 +74,22 @@ I did add some green text at the very end where I thank you for playing my game.
 
 ## Logic and structure
 
-Below is a hand-drawn flowchars showing the paths that you can take throughout the game. 
+Below is a hand-drawn flowchart showing the paths that you can take throughout the game and how it ties together. 
+
+![flowchart](/images/flochart.jpg)
+
+All the stories lead to certain death, but some stories are nicer than others. It's not a very happy game, but then again,  life is not always happy either.
+For each choice in the story there is a print of what choices can be made. 
+
 
 ## Features
+
+1. Users are greeted with an introtext and it gets right into the story, explaining how to summon a demon. It sets the scene and fans of the Supernatural show
+will immediately know what is being summoned, and who. It also asks for the name of the person who did the summoning.
+
+![game start](/images/gamestart.png)
+
+2. The name cannot be empty as that will give you
 
 
 ### Existing features

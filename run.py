@@ -28,7 +28,7 @@ def tell_name():
             deal_time(name)
             break
         else:
-            print("Please tell me your name.")
+            print(F"{Fore.RED}Please tell me your name.")
 
 
 def deal_time(name):
