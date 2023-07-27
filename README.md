@@ -3,8 +3,8 @@
 
 ## INDEX
 
-+ [Introduction](#Introduction "Introduction")
-   + [Links](#Links "Links")
++ [Introduction](#introduction "Introduction")
+   + [Links](#links "Links")
 + [UX](#ux "UX")
    + [Site Purpose](#site-purpose "Site Purpose")
 + [Design](#design "Design")
@@ -37,7 +37,7 @@ Above is a screenshot of the start of the game.
 
 ## Links
 
-[Live link for game](https://crossroads-demon-ee600f84f79d.herokuapp.com/)
+[Live link for the game](https://crossroads-demon-ee600f84f79d.herokuapp.com/)<br>
 [Link to the GitHub repo](https://github.com/Jikazu/crossroads-demon)
 
 
@@ -76,7 +76,7 @@ I did add some green text at the very end where I thank you for playing my game.
 
 Below is a hand-drawn flowchart showing the paths that you can take throughout the game and how it ties together. 
 
-![flowchart](/images/flochart.jpg)
+![flowchart](/images/flowchart.jpg)
 
 All the stories lead to certain death, but some stories are nicer than others. It's not a very happy game, but then again,  life is not always happy either.
 For each choice in the story there is a print of what choices can be made. 
@@ -89,25 +89,54 @@ will immediately know what is being summoned, and who. It also asks for the name
 
 ![game start](/images/gamestart.png)
 
-2. The name cannot be empty as that will give you
+2. The name cannot be empty as that will give you a message from Crowley to please tell him your name.
 
+![name](/images/tellname.png)
 
-### Existing features
+It is only the name that has a free option, as all the other stages you get presented with two options. 
+If you select yes out of the two options, you will get further in the story, as its my equivalent of "do you want to play the game".
+If you say no, Crowley will get mad at you and go away. You will get prompted again if you want to play again. If you say no there, the game ends.
+
+![options](/images/options.png)
+![dont want to play](/images/noplay.png)
+
+It is not case sensitive, as I'm using a .lower() function in my code. 
+If you however make a typo, or write something completely else or just press enter it will prompt you again for a correct input.
+
+![invalidchoice](/images/invalidchoice.png)
+
+There are two main ways that the story can go, either for love or money. As I mentioned previously in my readme, all the stories will end in death,
+and will loop back to do you want to play again. All the stories are different however based on your choices along the way.
+
+Below is one example of an ending if we go down the money choices. 
+
+![money ending](/images/moneyending.png)
+
+### Future features
+
++ It would be nice to go deeper with the story, and add a renegotiation with Crowley for 10 more years.
++ Could be fun to add a section where you can choose to try and kill Crowley so you can continue living your life instead of dying after 10 years.
 
 ## Technologies used
 
-- Python [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [Colorama](https://pypi.org/project/colorama/)
 
 ## Testing
-Test of functionality and appearance of the website has have been dealt with troughout the development process. 
+Test of functionality and appearance of the app has have been dealt with troughout the development process. 
 Tests has been conducted with Google Chrome on different devices.
 
 I've listed my main issues here - 
 
+1. Could press enter to skip by entering the name.
+    - Solution: Added an if set for the name, if the string is not empty to go to the next function, and if it's empty to loop back to enter the name.
+2. I firstly tried to put everything in one big function, but then if you put in a wrong input it would loop back all the way to the beginning.
+    - Solution: Broke down each choice to its own function with its own loop and called each function if the choice was correct such as yes/love/money etc. Also added breaks to break out of loops.
+3. Code did not pass the validation as my lines were too long, and I didn't know how to break up the print statements so it would pass.
+    - Solution: For it to look nicer and pass, I put all the print statements into bigger statements and used the \n\ to split them into different rows instead different prints.
 
-Other than the above, I had some validation errors in my code with lines that were too long, with random blankspaces, not enough lines in between etc.
-
-
+Other than the above, I had quite a lot of validation errors in my code with lines that were too long, with random blankspaces, not enough lines in between etc.
+I've also confirmed that each choice goes to where it's supposed to be, all inputs need to be correctly inputted without any blank enters, and that the loops break where they should so the options to play again will come up at the end.
 
 ### Validator Testing
 
@@ -131,21 +160,21 @@ The live version of the project is deployed at Heroku.
 
 The stages are as follows:
 
-Create an account or log-in to Heroku on www.heroku.com
-There are now extra requirements for security, so you will need a 2fa authenticator app.
-Press the button where it says you can create a new app.
-Go to 'settings'. Even if you do not have an API to link with the app,
-Now, on the same page, there's the option to add buildpacks. These need to be built in this specific order: first of all, Python (press save), then Node.js (press save). Python should appear above Node.js on the list of added buildpacks.
-Now, go to the 'deploy' page.
-Link your project via Github, here, and choose the right repo.
-Click on 'enable automatic deployment'
-You may need to make a change in GitPod and commit & push it after this process in order to trigger automatic deployment.
-Press the 'open app' button and you should see your app. You can get your deployed link here, or it should be in green on the deply page after a few minutes.
+Create an account or log-in to Heroku on www.heroku.com<br>
+There are now extra requirements for security, so you will need a 2fa authenticator app.<br>
+Press the button where it says you can create a new app.<br>
+Go to 'settings', as there's the option to add buildpacks.<br>
+These need to be built in this specific order: first of all, Python (press save), then Node.js (press save). Python should appear above Node.js on the list of added buildpacks.<br>
+Now, go to the 'deploy' page.<br>
+Link your project via Github, here, and choose the right repo.<br>
+Click on 'enable automatic deployment'<br>
+You may need to make a change in GitPod and commit & push it after this process in order to trigger automatic deployment.<br>
+Press the 'open app' button and you should see your app. You can get your deployed link here, or it should be in green on the deply page after a few minutes.<br>
    
 
 ## Content
 
-- All content on this site has been produced by the author of this project. 
+- The story is inspired by the character Crowley in the show Supernatural, but the stories and text in this game is created by the author of this project. 
 
 
 
@@ -162,7 +191,7 @@ Martina Terlevic
 
  Sites that I've used a lot during this project to look up various things are:
 
- https://www.w3schools.com/
+ https://www.w3schools.com/<br>
  https://www.youtube.com
 
 
