@@ -16,8 +16,8 @@ When making a deal with a demon they can make your dreams come true.\n\
 You have all of these items, so you start digging and putting \n\
 your items in the hole. After some 10 minutes have passed, you \n\
 suddenly see a man appearing with glowing red eyes.")
-        print(F'{Fore.RED}Hello mortal, it is I, the crossroad demon\n\
-Crowley. Tell me, who have summoned me here?')
+        print(F"{Fore.RED}Hello mortal, it is I, the crossroad demon\n\
+Crowley. Tell me, what is your name?")
         tell_name()
 
 
